@@ -1,0 +1,9 @@
+h1 {
+  /*font-size: 100%;*/
+  font-size: 24pt;
+}
+
+h1, div {
+    padding: 10px;
+    /* margin: 10px; */
+}

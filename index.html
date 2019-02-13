@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Psychic Game</title>
-    <link rel="stylesheet" type="text/css" ref="assets/reset.css"/>
-    <link rel="stylesheet" type="text/css" ref="assets/style.css"/>
-    <script type="text/javascript" src="javascript/game.js"></script>
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 </head>
 <body>
-    
+    <h1>Word Guess Game</h1>
+    <br>
+    <div id="intialization-text">Guess a word that I'm thinking of</div>
+    <br>
+    <div id="myword"></div>
+    <br>
+    <div id="wins">Wins: </div>
+    <br>
+    <div id="losses">Losses: </div>
+    <br>
+    <div id="guesses-left">Guesses Left: <span id="guesses-left-num">12</span></div>
+    <br>
+    <div id="guesses-so-far">Your Guesses So Far: <span id="guesses-so-far-user"></span></div>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 </html>
