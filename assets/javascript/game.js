@@ -6,6 +6,7 @@
       var guessesleftnumText = document.getElementById("guesses-left-num");
       var winsText = document.getElementById("wins");
       var lossesText = document.getElementById("losses");
+      var ndfightsongdiv = document.getElementById("ndfightsong");
       var guessesleft = 12;
       var wins = 0;
       var losses = 0;
@@ -64,6 +65,7 @@
             //if the user has uncovered all of the letters
             if (lettersUncovered === randomWord.length) {
               console.log("here4");
+              ndfightsongdiv.innerHTML = "<audio autoplay><source src=\"assets/songs/ndfightsong.mp3\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>" 
               wins++;
               guessessofaruserText.textContent = "";
               mySpan = document.createElement("span");
