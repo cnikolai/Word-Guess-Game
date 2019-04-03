@@ -41,19 +41,14 @@
         //alert('here3');
 
         
-        console.log("here1");
         //user chose a lower case letter from the alphabet
         if (letters.indexOf(userChose) != -1) {
-          console.log("here2");
           var indexofletterinword = randomWord.indexOf(userChose)
           //the user guesses a letter correctly
           if (indexofletterinword != -1) {
-            console.log("here11");
             console.log("guesses of user indexed by userchoice: " + guessessofaruserText.textContent.indexOf(userChose))
            if (guessessofaruserText.textContent.indexOf(userChose) === -1) {//and it hasn't already been chosen
-            console.log("here9");
             for (var j=0;j< randomWord.length; j++) { 
-              console.log("here3");
               if (randomWord[j] === userChose) {
                 //display the letter in the word            
                 var userChosenLetter = document.getElementById(j);
@@ -64,7 +59,6 @@
             console.log("letters uncovered: " + lettersUncovered)
             //if the user has uncovered all of the letters
             if (lettersUncovered === randomWord.length) {
-              console.log("here4");
               ndfightsongdiv.innerHTML = "<audio autoplay><source src=\"assets/songs/ndfightsong.mp3\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>" 
               wins++;
               guessessofaruserText.textContent = "";
@@ -91,7 +85,6 @@
               }
               lettersUncovered = 0;
             } else if (guessesleft > 1) {//if number of guesses is down to 0, then lose
-              console.log("here5");
               //decrease guesses, add guesses to guess queue
               guessesleft--;
               guessesleftnumText = document.getElementById("guesses-left-num");
@@ -100,7 +93,6 @@
               guessessofaruserText.textContent = guessessofaruserText.textContent + "," + userChose;
             } 
             else {
-              console.log("here6");
               //the user used up all of his guesses and lost the game
               losses++;
               lettersUncovered = 0;
@@ -131,11 +123,9 @@
             }
           }
         } else { //the user did not choose a letter that exists in the word
-            console.log("here7");
               //decrease guesses, add guesses to guess queue
               guessesleft--;
               if (guessesleft > 1) {//if number of guesses is down to 0, then lose
-                console.log("here8");
                 //decrease guesses, add guesses to guess queue
                 // guessesleft--;
                 guessesleftnumText = document.getElementById("guesses-left-num");
@@ -144,7 +134,6 @@
                 guessessofaruserText.textContent = guessessofaruserText.textContent + "," + userChose;
               } 
               else {
-                console.log("here9");
                 //the user used up all of his guesses and lost the game
                 losses++;
                 lettersUncovered = 0;
